@@ -119,16 +119,25 @@ The state space can be represented as a graph as follows:
 
 <img width="551" height="550" alt="image" src="https://github.com/user-attachments/assets/6c7cef1f-6de3-4458-abbf-dc0059a5f339" />
 
+Figure 1.6: State and State Space
 
+- **Current State (Si)**: This represents the current configuration or condition of the solution at any given moment. It encapsulates all the relevant information needed to describe the solution's status.
 
+Let a state S be defined as:
 
-- **State (Si)** — a configuration `(v1, v2, ..., vn)` describing the system at a point in time.
+`S = (v1, v2, v3 . . . vn)`
 
-- **Choices (Ci)** — the set of actions available from a given state.
+Where each vi is a variable.
 
-- **Transition Function (T)** — `T(Si, cij) = Sj`, applying a choice to move from one state to another.
+- **Choices (Ci)**: From each state Si, there is a set of possible actions or choices (Ci) that can be applied to transition to other states:
 
-- **Final State (Sf)** — a state satisfying the problem's success criteria (goal achievement, constraint satisfaction, optimization threshold, or termination condition).
+`Ci = {ci1, ci2, ci3 . . . cim}`
+
+- **Transition Function (T)**: Each choice cij in the set Ci leads to a new state. Applying a choice cij to the current state Si results in a new state Sj. This can be represented by a transition function T such that:
+
+`T(Si, cij) = Sj`
+
+- **Final State (Sf)**: There can be many types of goals when considering a solution to a problem. A common goal is to reach a final state (Sf), where the problem is considered solved. The final state satisfies the conditions or criteria defined by the problem. We go from state to state applying choices until the success criteria are met. Other types of goals are specified in a later section.
 
 Because every problem can be cast into this state/choice/transition/goal structure, general techniques apply across domains:
 
