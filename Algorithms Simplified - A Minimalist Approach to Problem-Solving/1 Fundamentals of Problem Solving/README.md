@@ -119,8 +119,6 @@ The state space can be represented as a graph as follows:
 
 <img width="551" height="550" alt="image" src="https://github.com/user-attachments/assets/6c7cef1f-6de3-4458-abbf-dc0059a5f339" />
 
-Figure 1.6: State and State Space
-
 - **Current State (Si)**: This represents the current configuration or condition of the solution at any given moment. It encapsulates all the relevant information needed to describe the solution's status.
 
 Let a state S be defined as:
