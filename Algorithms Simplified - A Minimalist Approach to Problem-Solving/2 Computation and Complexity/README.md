@@ -62,3 +62,14 @@ A Turing Machine (Alan Turing, 1936) is the foundational theoretical model of co
 ## 2.6 Conclusion
 
 This chapter covered the building blocks of computation and complexity: algorithmic approaches (greedy, divide and conquer, memoization, DP), the core elements of programs (branches, loops, variables, functions, recursion), program execution (the call stack, programs as call graphs), processes and concurrency, how to reason about time and space complexity via Big O, and the Turing Machine as the theoretical basis for what is computable. These fundamentals underpin the algorithmic thinking developed in later chapters.
+
+---
+
+2. Computation and Complexity
+How to reason about the cost of an algorithm: time and space complexity, Big-O/Theta/Omega notation, and trade-offs between different solutions to the same problem.
+
+Contents
+Big-O, Big-Theta, Big-Omega notation
+Time complexity analysis
+Space complexity analysis
+Best, average, and worst case
