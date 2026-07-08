@@ -137,6 +137,25 @@ Where each vi is a variable.
 
 - **Final State (Sf)**: There can be many types of goals when considering a solution to a problem. A common goal is to reach a final state (Sf), where the problem is considered solved. The final state satisfies the conditions or criteria defined by the problem. We go from state to state applying choices until the success criteria are met. Other types of goals are specified in a later section.
 
+Reaching the Final State: To determine if a final state has been reached,
+specific conditions are checked. These could include:
+
+• Goal achievement: Verifying if the desired outcome has been
+attained (e.g., all puzzle pieces are in the correct positions).
+
+• Constraint satisfaction: Ensuring all problem constraints are met
+(e.g., all items are packed within the weight limit).
+
+• Optimization criteria: Checking if the solution meets or exceeds a
+defined threshold (e.g., the shortest path has been found).
+
+• Termination conditions: Assessing if predefined stopping criteria
+have been met (e.g., a maximum number of iterations has been
+reached).
+
+The specific conditions checked depend on the nature of the problem and
+the desired solution characteristics. 
+
 Because every problem can be cast into this state/choice/transition/goal structure, general techniques apply across domains:
 
 - **Greedy algorithms** — pick the best-looking immediate choice at each step.
