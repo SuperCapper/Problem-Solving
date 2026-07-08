@@ -35,7 +35,7 @@ Using a "squares on paper" analogy, imagine drawing two identical squares on the
 * fully touching, or
 * overlapping
 
-<img width="524" height="411" alt="image" src="https://github.com/user-attachments/assets/f047cbc3-61f0-4059-9ca6-57373430cb71" />
+  <img width="524" height="411" alt="image" src="https://github.com/user-attachments/assets/f047cbc3-61f0-4059-9ca6-57373430cb71" />
 
 To maintain the integrity of distinct data units, we'll dismiss the fourth scenario — overlapping, as it implies a fusion of data that defies our requirement for
 discrete units. 
@@ -49,7 +49,7 @@ paper will be filled with non-intersecting squares. However, data in
 isolation is often meaningless. Thus, we introduce lines that bridge these
 squares, connecting one piece of data to another. 
 
-<img width="598" height="459" alt="image" src="https://github.com/user-attachments/assets/e26938e5-fed2-4222-b4f7-50e39729afc1" />
+  <img width="598" height="459" alt="image" src="https://github.com/user-attachments/assets/e26938e5-fed2-4222-b4f7-50e39729afc1" />
 
 This network of squares and connecting lines forms the basic structure known as a **graph**. This
 structure enables us to navigate from one data point to another, allowing data to reference other data, a principle
@@ -60,7 +60,7 @@ proximity can symbolize a related series of data units. We can extend this
 sequence indefinitely, not just linearly, but also bi-dimensionally on our
 two-dimensional paper, crafting rows and columns.
 
-<img width="783" height="480" alt="image" src="https://github.com/user-attachments/assets/a221ca76-1ad2-479e-a805-d8cb8d53dc9d" />
+  <img width="783" height="480" alt="image" src="https://github.com/user-attachments/assets/a221ca76-1ad2-479e-a805-d8cb8d53dc9d" />
 
 This arrangement gives rise to another fundamental data structure known as
 a **table**, or in computational terms, an **array**, or **matrix**. Arrays provide the
@@ -75,7 +75,7 @@ The boundary is a small piece of the paper, represented by infinitely many
 points and the name is a finite string of symbols, mapped to a natural
 number.
 
-<img width="516" height="180" alt="image" src="https://github.com/user-attachments/assets/e5e66c2f-8345-4421-813c-316c0a1ea0d3" />
+  <img width="516" height="180" alt="image" src="https://github.com/user-attachments/assets/e5e66c2f-8345-4421-813c-316c0a1ea0d3" />
 
 Once we introduce labelling, we can then introduce the power of random
 access memory. As humans, we can quickly point to the relevant area of the
@@ -87,7 +87,7 @@ provide the coordinates of the relevant items, the computer can implicitly
 "select" separately on x and y coordinates and end up at the right slot by
 "magic" (efficiently), we demonstrate the power of **random access** (RAM): a computer can jump directly to a piece of data via its coordinates rather than scanning everything. 
 
-<img width="746" height="575" alt="image" src="https://github.com/user-attachments/assets/42e90cea-7be7-475c-b7cc-ac95752abfb4" />
+  <img width="746" height="575" alt="image" src="https://github.com/user-attachments/assets/42e90cea-7be7-475c-b7cc-ac95752abfb4" />
 
 In the end, our understanding of data, with all its intricacies, boils down to
 two fundamental structures: 
