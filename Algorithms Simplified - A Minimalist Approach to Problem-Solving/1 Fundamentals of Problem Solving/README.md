@@ -1,10 +1,10 @@
 # 1. Fundamentals of Problem Solving
 
-Summary of Chapter 1 from *Algorithms Simplified: A Minimalist Approach to Problem-Solving* (Rohith B V).
-
 ## 1.1 What is a "problem"?
 
-A problem is a gap between a current state and a desired state, bound by a set of constraints. In math and computer science, it's usually posed as a well-defined question that demands a systematic approach to solve.
+A problem is a gap between a current state and a desired state, bound by a set of constraints. 
+
+In math and computer science, it's usually posed as a well-defined question that demands a systematic approach to solve.
 
 ## 1.2 Types of real-world problems
 
