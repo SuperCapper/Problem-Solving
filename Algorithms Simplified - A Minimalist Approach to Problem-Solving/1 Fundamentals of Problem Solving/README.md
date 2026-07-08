@@ -70,6 +70,16 @@ Within the state-space framework, a "solution" can take several forms:
 
 Which type of solution is appropriate depends on context: optimization problems usually want an optimal path, search problems want a single or set of final states, and exploratory problems may need all paths or full coverage. The Travelling Salesperson Problem and Sudoku are worked examples showing how a single problem can be viewed through multiple solution-type lenses at once. Even continuous state spaces reduce to discrete state-space graphs once every change is treated as a discrete step.
 
+---
+
+Core concepts for approaching problems before writing any code: understanding requirements, breaking problems into smaller pieces, and choosing a strategy (brute force, greedy, divide and conquer, dynamic programming, etc.).
+
+Contents
+Problem decomposition
+Pattern recognition
+Choosing an approach
+Common problem-solving heuristics
+
 ## 1.8 Conclusion
 
 This chapter established the vocabulary for everything that follows: problems and their types, the two foundational data structures (graphs and tables), the state-space formulation (state, choices, transitions, final state), state-space navigation as graph traversal, problem decomposition via DAGs, and the different forms a "solution" can take. These concepts underpin the algorithms and techniques covered in later chapters.
