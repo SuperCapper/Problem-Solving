@@ -2,18 +2,21 @@
 
 ## 1.1 What is a "problem"?
 
-A problem is a gap between a current state and a desired state, bound by a set of constraints. 
+A problem, in its essence, is a situation that requires resolution. It is a gap between a current state and a desired state, bound by a set of constraints. 
 
 In math and computer science, it's usually posed as a well-defined question that demands a systematic approach to solve.
 
 ## 1.2 Types of real-world problems
 
 Real-world problems generally fall into a few categories:
-- **Optimization** — e.g., finding the fastest route between two cities.
-- **Decision** — e.g., determining whether a number is prime.
-- **Search** — e.g., finding a specific book in a large library.
-- **Design** — e.g., designing a bridge that meets load and material constraints.
-- **Prediction** — e.g., forecasting weather from historical patterns.
+- **Optimization** — e.g., finding the fastest route between two cities can involve considering various factors like
+distance, traffic and time of day.
+- **Decision** — e.g., determining whether a number is prime involves checking divisibility by smaller numbers.
+- **Search** — e.g., finding a specific book in a large library involves organizing and navigating the collection efficiently.
+- **Design** — e.g., designing a bridge that meets load and material constraints requires meeting criteria
+such as load capacity, material strength and environmental impact.
+- **Prediction** — e.g., forecasting weather from historical patterns involves analyzing
+patterns in historical data to forecast future conditions.
 
 ## 1.3 Data Structures: the building blocks
 
