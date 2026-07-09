@@ -40,11 +40,13 @@ Using a "squares on paper" analogy, imagine drawing two identical squares on the
 To maintain the integrity of distinct data units, we'll dismiss the fourth scenario — overlapping, as it implies a fusion of data that defies our requirement for
 discrete units. 
 
+---
+
 For consistency, we'll consider each square to be identical in size,
 signifying that the data units, say numerical values, are equal in magnitude
 and uniform in type.
 
-If we continue under the premise that our data squares must not touch, the
+Continuing under the premise that our data squares must not touch, the
 paper will be filled with non-intersecting squares. However, data in
 isolation is often meaningless. Thus, we introduce lines that bridge these
 squares, connecting one piece of data to another. 
@@ -121,48 +123,48 @@ The state space can be represented as a graph as follows:
 
 - **Current State (Si)**: This represents the current configuration or condition of the solution at any given moment. It encapsulates all the relevant information needed to describe the solution's status.
 
-Let a state S be defined as:
-
-`S = (v1, v2, v3 . . . vn)`
-
-Where each vi is a variable.
+<img width="449" height="180" alt="image" src="https://github.com/user-attachments/assets/1b618ead-281e-4c0a-938c-66d0c4d8523e" />
 
 - **Choices (Ci)**: From each state Si, there is a set of possible actions or choices (Ci) that can be applied to transition to other states:
 
-`Ci = {ci1, ci2, ci3 . . . cim}`
+<img width="270" height="56" alt="image" src="https://github.com/user-attachments/assets/10a57eb6-201e-4041-805f-251d803341d1" />
 
 - **Transition Function (T)**: Each choice cij in the set Ci leads to a new state. Applying a choice cij to the current state Si results in a new state Sj. This can be represented by a transition function T such that:
 
-`T(Si, cij) = Sj`
+<img width="167" height="53" alt="image" src="https://github.com/user-attachments/assets/14d6537b-7f09-4009-b655-ec731c0aa4a7" />
 
 - **Final State (Sf)**: There can be many types of goals when considering a solution to a problem. A common goal is to reach a final state (Sf), where the problem is considered solved. The final state satisfies the conditions or criteria defined by the problem. We go from state to state applying choices until the success criteria are met. Other types of goals are specified in a later section.
 
-Reaching the Final State: To determine if a final state has been reached,
+---
+
+**Reaching the Final State**: To determine if a final state has been reached,
 specific conditions are checked. These could include:
 
-• Goal achievement: Verifying if the desired outcome has been
+• **Goal achievement**: Verifying if the desired outcome has been
 attained (e.g., all puzzle pieces are in the correct positions).
 
-• Constraint satisfaction: Ensuring all problem constraints are met
+• **Constraint satisfaction**: Ensuring all problem constraints are met
 (e.g., all items are packed within the weight limit).
 
-• Optimization criteria: Checking if the solution meets or exceeds a
+• **Optimization criteria**: Checking if the solution meets or exceeds a
 defined threshold (e.g., the shortest path has been found).
 
-• Termination conditions: Assessing if predefined stopping criteria
+• **Termination conditions**: Assessing if predefined stopping criteria
 have been met (e.g., a maximum number of iterations has been
 reached).
 
 The specific conditions checked depend on the nature of the problem and
 the desired solution characteristics. 
 
-Because every problem can be cast into this state/choice/transition/goal structure, general techniques apply across domains:
+---
 
-- **Greedy algorithms** — pick the best-looking immediate choice at each step.
+Because every problem can be cast into this state/choice/transition/goal structure, general techniques apply across domains:
 
 - **Exhaustive search** — explore all states/transitions to guarantee optimality.
 
-- **Divide and conquer** — split into independent subproblems and combine results.
+- **Divide and conquer** — split into independent subproblems, to later combine results.
+
+- **Greedy algorithms** — pick the best-looking immediate choice at each step.
 
 - **Dynamic programming** — reuse previously computed subproblem solutions.
 
