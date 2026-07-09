@@ -161,14 +161,20 @@ By viewing the state space as a graph, we can apply various graph traversal tech
 
 The following is a (non-exhaustive) list of graph traversal algorithms:
 • Breadth-First Search (BFS)
+
 • Depth-First Search (DFS)
+
 • Dijkstra's Algorithm
+
 • A* Algorithm (not covered) 
 
 ### 1.5.2 Advantages of Graph Traversal for State Space Navigation
 • **Clarity and Structure**: Representing problems as graphs provides a clear and structured way to visualize and solve them.
+
 • **Algorithmic Tools**: A wide range of well-established algorithms for graph traversal and pathfinding can be directly applied.
+
 • **Optimization**: Graph-based methods allow for the optimization of solutions, such as finding the shortest or least costly path.
+
 • **Scalability**: Graph algorithms are designed to handle large and complex state spaces efficiently. 
 
 ### 1.5.3 Summary 
@@ -183,33 +189,44 @@ Complex problems can be broken into subproblems represented as a **Directed Acyc
 
 In the DAG above:
 • Nodes represent subproblems or components of the main problem.
+
 • Edges represent dependencies or relationships between these components.
+
 • The acyclic nature ensures there are no circular dependencies.
+
 • The direction of edges indicates the flow of information or sequence of solving.
 
 The DAG representation is a powerful tool in problem-solving as it provides a clear visual of the problem's structure, dependencies and potential solution paths.
 
 This structure allows us to:
 • Break down complex problems into manageable parts
+
 • Understand the order in which these parts need to be addressed 
+
 • Identify independent subproblems that can be solved in parallel
+
 • Recognize shared subproblems to avoid redundant work
 
 ### 1.6.1 Conditions for Collapse into a DAG 
 A graph representing a state space or problem can be considered to "collapse" into a Directed Acyclic Graph (DAG) under certain conditions. This transition often implies a simplification or restructuring of the problem, allowing for more efficient solutions. 
 • **Acyclic Nature**: The graph must be acyclic, meaning there are no cycles or loops. Each state or node is visited only once, ensuring that the graph flows in one direction without revisiting any node.
+
 • **Dependency Structure**: The problem can be decomposed into subproblems with dependencies that are strictly hierarchical. Each subproblem depends on the results of other subproblems in a way that avoids circular dependencies.
 
 ### 1.6.2 Implications of Collapsing into a DAG
 When a problem's graph representation collapses into a DAG, this restructuring provides several advantages:
 • **Subproblem Definition**: The problem is now decomposed into smaller, manageable subproblems. Each node (or state) in the DAG represents a subproblem that contributes to the overall solution.
+
 • **Topological Ordering**: Subproblems have a **strictly hierarchical dependency structure** (no circular dependencies). The DAG allows for a “topological sorting” of nodes, providing an order in which subproblems should be solved. This order respects the dependencies and ensures that each subproblem is solved before it is needed by other subproblems.
+
 • **Efficiency in Problem-Solving**: With a DAG, we can apply dynamic programming and memoization techniques. Since the graph is acyclic, we can store the results of subproblems and reuse them, avoiding redundant computations. 
 
 ### 1.6.3 Equivalence of DAG Collapse and Subproblem Decomposition 
 The collapse of a graph into a DAG is effectively equivalent to recognizing that the problem can be decomposed into subproblems. Here’s why:
 • **Hierarchical Subproblems**: A DAG inherently represents a hierarchy or order of subproblems. Each node depends on the results of its predecessors, aligning with the concept of solving smaller problems to build up to the solution of the larger problem.
+
 • **No Cycles**: The absence of cycles ensures that there is a definitive direction to the problem-solving process, similar to how subproblems are solved sequentially without looping back.
+
 • **Reusability of Solutions**: In a DAG, once a subproblem is solved, its solution can be reused by any other subproblem that depends on it. This is a fundamental aspect of dynamic programming. 
 
 ### 1.6.4 Example: Dynamic Programming
@@ -218,7 +235,9 @@ Consider the classic example of the Fibonacci sequence, where each number is the
 <img width="301" height="43" alt="image" src="https://github.com/user-attachments/assets/d5abe114-ae51-4c39-996c-57ae0e7a93a8" />
 
 • **Graph Representation**: Initially, we might represent this with a graph where each node corresponds to a Fibonacci number and edges represent the dependency (e.g., F'n` depends on F'n-1` and F'n-2`).
+
 • **DAG Structure**: Though visualized as a tree, this graph is inherently a DAG because there are overlapping (repeated) subproblems and there are no cycles – once a Fibonacci number is computed, it is used by the subsequent numbers without revisiting.
+
 • **Subproblem Decomposition**: Each Fibonacci number is a subproblem that depends on the solutions to two smaller subproblems. Dynamic programming can be used to compute each number efficiently by storing and reusing previously computed values. 
 
 <img width="796" height="375" alt="image" src="https://github.com/user-attachments/assets/98d61eb0-dcc3-41de-b9c3-61560b7d315d" />
@@ -235,10 +254,15 @@ The Fibonacci sequence illustrates this: it looks like a tree of recursive calls
 A solution is a satisfactory answer or resolution to a problem. It bridges the gap between the current state and the desired state while adhering to the given constraints. In the context of computational problems, a solution typically has the following characteristics:
 • **Correctness**: A correct solution ensures that the problem is
 accurately addressed as per the given requirements.
+
 • **Efficiency**: Efficient solutions save time and resources, making them practical for real-world applications.
+
 • **Completeness**: A complete solution works for all possible valid inputs, ensuring reliability.
+
 • **Clarity**: Clear solutions are easier to understand, implement and maintain.
+
 • **Robustness**: Robust solutions handle unexpected inputs gracefully, preventing failures.
+
 • **Scalability**: Scalable solutions perform well even as the problem size grows, ensuring long-term usability.
 
 Often, there might be multiple valid solutions to a problem, each with its trade-offs in terms of these characteristics. The choice of the best solution typically depends on the specific context and requirements of the situation. Understanding what constitutes a solution is crucial in problem-solving, as it guides the development of algorithms and helps in evaluating different approaches.
@@ -249,15 +273,21 @@ In the context of a graph representation of a problem, a solution can take vario
 
 **Single Final State (S'f')** — one specific goal state (e.g., the maze exit).
 • **Definition**: A single, specific state that signifies the completion or solution of the problem.
+
 • **Example**: In a maze-solving problem, reaching the exit cell (S'f') represents the solution.
+
 • **Graph Representation**: The solution is a path from the initial state (S'o') to this final state (S'f').
 
 <img width="443" height="295" alt="image" src="https://github.com/user-attachments/assets/dac36fd3-8308-401d-8f9a-ea1560f264b9" />
 
 **Set of Final States ( )** — any of several acceptable end states (e.g., any winning score in a game).
 • **Definition**: A collection of acceptable final states, any of which would be considered a valid solution.
-• **Example**: In a game, reaching any of several winning states could be considered a solution. For example, in football the states could be encoded as (number of goals by team A, number of goals by team B). So the set of possible winning states is (1, 0), (2, 0), (2, 1), (3, 2)…
+
+• **Example**: In a game, reaching any of several winning states could be considered a solution. For example, in football the states could be encoded as (number of goals by team A, number of goals by team B). So the set 
+of possible winning states is (1, 0), (2, 0), (2, 1), (3, 2)…
+
 • **Graph Representation**: The solution includes multiple paths from the initial state (S'o') to any of the states in the set F.
+
 
 
 
