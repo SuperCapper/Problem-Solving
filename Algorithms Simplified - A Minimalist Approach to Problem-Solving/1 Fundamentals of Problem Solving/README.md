@@ -160,6 +160,7 @@ The concept of navigating through a state space can indeed be effectively consid
 By viewing the state space as a graph, we can apply various graph traversal techniques to explore and find solutions to the problem. 
 
 The following is a (non-exhaustive) list of graph traversal algorithms:
+
 • Breadth-First Search (BFS)
 
 • Depth-First Search (DFS)
@@ -169,6 +170,7 @@ The following is a (non-exhaustive) list of graph traversal algorithms:
 • A* Algorithm (not covered) 
 
 ### 1.5.2 Advantages of Graph Traversal for State Space Navigation
+
 • **Clarity and Structure**: Representing problems as graphs provides a clear and structured way to visualize and solve them.
 
 • **Algorithmic Tools**: A wide range of well-established algorithms for graph traversal and pathfinding can be directly applied.
@@ -188,6 +190,7 @@ Complex problems can be broken into subproblems represented as a **Directed Acyc
 <img width="585" height="476" alt="image" src="https://github.com/user-attachments/assets/fdb1ecdd-83cd-4b79-bc49-db059d0aab6f" />
 
 In the DAG above:
+
 • Nodes represent subproblems or components of the main problem.
 
 • Edges represent dependencies or relationships between these components.
@@ -199,6 +202,7 @@ In the DAG above:
 The DAG representation is a powerful tool in problem-solving as it provides a clear visual of the problem's structure, dependencies and potential solution paths.
 
 This structure allows us to:
+
 • Break down complex problems into manageable parts
 
 • Understand the order in which these parts need to be addressed 
@@ -209,12 +213,14 @@ This structure allows us to:
 
 ### 1.6.1 Conditions for Collapse into a DAG 
 A graph representing a state space or problem can be considered to "collapse" into a Directed Acyclic Graph (DAG) under certain conditions. This transition often implies a simplification or restructuring of the problem, allowing for more efficient solutions. 
+
 • **Acyclic Nature**: The graph must be acyclic, meaning there are no cycles or loops. Each state or node is visited only once, ensuring that the graph flows in one direction without revisiting any node.
 
 • **Dependency Structure**: The problem can be decomposed into subproblems with dependencies that are strictly hierarchical. Each subproblem depends on the results of other subproblems in a way that avoids circular dependencies.
 
 ### 1.6.2 Implications of Collapsing into a DAG
 When a problem's graph representation collapses into a DAG, this restructuring provides several advantages:
+
 • **Subproblem Definition**: The problem is now decomposed into smaller, manageable subproblems. Each node (or state) in the DAG represents a subproblem that contributes to the overall solution.
 
 • **Topological Ordering**: Subproblems have a **strictly hierarchical dependency structure** (no circular dependencies). The DAG allows for a “topological sorting” of nodes, providing an order in which subproblems should be solved. This order respects the dependencies and ensures that each subproblem is solved before it is needed by other subproblems.
@@ -223,6 +229,7 @@ When a problem's graph representation collapses into a DAG, this restructuring p
 
 ### 1.6.3 Equivalence of DAG Collapse and Subproblem Decomposition 
 The collapse of a graph into a DAG is effectively equivalent to recognizing that the problem can be decomposed into subproblems. Here’s why:
+
 • **Hierarchical Subproblems**: A DAG inherently represents a hierarchy or order of subproblems. Each node depends on the results of its predecessors, aligning with the concept of solving smaller problems to build up to the solution of the larger problem.
 
 • **No Cycles**: The absence of cycles ensures that there is a definitive direction to the problem-solving process, similar to how subproblems are solved sequentially without looping back.
@@ -252,6 +259,7 @@ The Fibonacci sequence illustrates this: it looks like a tree of recursive calls
 ## 1.7 What is a solution?
 
 A solution is a satisfactory answer or resolution to a problem. It bridges the gap between the current state and the desired state while adhering to the given constraints. In the context of computational problems, a solution typically has the following characteristics:
+
 • **Correctness**: A correct solution ensures that the problem is
 accurately addressed as per the given requirements.
 
@@ -272,6 +280,7 @@ In the context of a graph representation of a problem, a solution can take vario
 
 
 **Single Final State (S'f')** — one specific goal state (e.g., the maze exit).
+
 • **Definition**: A single, specific state that signifies the completion or solution of the problem.
 
 • **Example**: In a maze-solving problem, reaching the exit cell (S'f') represents the solution.
@@ -281,6 +290,7 @@ In the context of a graph representation of a problem, a solution can take vario
 <img width="443" height="295" alt="image" src="https://github.com/user-attachments/assets/dac36fd3-8308-401d-8f9a-ea1560f264b9" />
 
 **Set of Final States ( )** — any of several acceptable end states (e.g., any winning score in a game).
+
 • **Definition**: A collection of acceptable final states, any of which would be considered a valid solution.
 
 • **Example**: In a game, reaching any of several winning states could be considered a solution. For example, in football the states could be encoded as (number of goals by team A, number of goals by team B). So the set 
