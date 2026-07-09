@@ -203,32 +203,63 @@ A graph representing a state space or problem can be considered to "collapse" in
 ### 1.6.2 Implications of Collapsing into a DAG
 When a problem's graph representation collapses into a DAG, this restructuring provides several advantages:
 • **Subproblem Definition**: The problem is now decomposed into smaller, manageable subproblems. Each node (or state) in the DAG represents a subproblem that contributes to the overall solution.
-• **Topological Ordering**: The DAG allows for a “topological sorting” of nodes, providing an order in which subproblems should be solved. This order respects the dependencies and ensures that each subproblem is solved before it is needed by other subproblems.
+• **Topological Ordering**: Subproblems have a **strictly hierarchical dependency structure** (no circular dependencies). The DAG allows for a “topological sorting” of nodes, providing an order in which subproblems should be solved. This order respects the dependencies and ensures that each subproblem is solved before it is needed by other subproblems.
 • **Efficiency in Problem-Solving**: With a DAG, we can apply dynamic programming and memoization techniques. Since the graph is acyclic, we can store the results of subproblems and reuse them, avoiding redundant computations. 
 
-A state-space graph "collapses" into a DAG when:
+### 1.6.3 Equivalence of DAG Collapse and Subproblem Decomposition 
+The collapse of a graph into a DAG is effectively equivalent to recognizing that the problem can be decomposed into subproblems. Here’s why:
+• **Hierarchical Subproblems**: A DAG inherently represents a hierarchy or order of subproblems. Each node depends on the results of its predecessors, aligning with the concept of solving smaller problems to build up to the solution of the larger problem.
+• **No Cycles**: The absence of cycles ensures that there is a definitive direction to the problem-solving process, similar to how subproblems are solved sequentially without looping back.
+• **Reusability of Solutions**: In a DAG, once a subproblem is solved, its solution can be reused by any other subproblem that depends on it. This is a fundamental aspect of dynamic programming. 
 
-- It is **acyclic** (no node is revisited).
+### 1.6.4 Example: Dynamic Programming
+Consider the classic example of the Fibonacci sequence, where each number is the sum of the two preceding ones:
 
-- Its subproblems have a **strictly hierarchical dependency structure** (no circular dependencies).
+<img width="301" height="43" alt="image" src="https://github.com/user-attachments/assets/d5abe114-ae51-4c39-996c-57ae0e7a93a8" />
 
-When this collapse happens, it unlocks:
+• **Graph Representation**: Initially, we might represent this with a graph where each node corresponds to a Fibonacci number and edges represent the dependency (e.g., F'n` depends on F'n-1` and F'n-2`).
+• **DAG Structure**: Though visualized as a tree, this graph is inherently a DAG because there are overlapping (repeated) subproblems and there are no cycles – once a Fibonacci number is computed, it is used by the subsequent numbers without revisiting.
+• **Subproblem Decomposition**: Each Fibonacci number is a subproblem that depends on the solutions to two smaller subproblems. Dynamic programming can be used to compute each number efficiently by storing and reusing previously computed values. 
 
-- **Topological ordering** — a valid sequence for solving subproblems.
+<img width="796" height="375" alt="image" src="https://github.com/user-attachments/assets/98d61eb0-dcc3-41de-b9c3-61560b7d315d" />
 
-- **Efficiency gains** — dynamic programming and memoization become applicable, since acyclic subproblem results can be cached and reused.
+### 1.6.5 Summary
+A problem's graph representation collapses into a DAG when it can be structured into a hierarchy of subproblems with no cyclic dependencies. This transformation indicates that the problem can be decomposed into manageable subproblems, facilitating the use of efficient problem-solving techniques like dynamic programming.
+
+The DAG structure provides a clear order for solving subproblems, ensuring that each subproblem's solution is available when needed by other dependent subproblems. This equivalence highlights the powerful synergy between graph theory and algorithm design in optimizing complex problem-solving processes. 
 
 The Fibonacci sequence illustrates this: it looks like a tree of recursive calls, but is really a DAG with overlapping subproblems (`Fn` depends on `Fn-1` and `Fn-2`), which is exactly why memoizing previously computed values makes it efficient.
 
 ## 1.7 What is a solution?
 
-A solution bridges the current and desired state while respecting constraints. Good solutions tend to be **correct**, **efficient**, **complete**, **clear**, **robust**, and **scalable** — though multiple valid solutions may trade these qualities off differently.
+A solution is a satisfactory answer or resolution to a problem. It bridges the gap between the current state and the desired state while adhering to the given constraints. In the context of computational problems, a solution typically has the following characteristics:
+• **Correctness**: A correct solution ensures that the problem is
+accurately addressed as per the given requirements.
+• **Efficiency**: Efficient solutions save time and resources, making them practical for real-world applications.
+• **Completeness**: A complete solution works for all possible valid inputs, ensuring reliability.
+• **Clarity**: Clear solutions are easier to understand, implement and maintain.
+• **Robustness**: Robust solutions handle unexpected inputs gracefully, preventing failures.
+• **Scalability**: Scalable solutions perform well even as the problem size grows, ensuring long-term usability.
 
-Within the state-space framework, a "solution" can take several forms:
+Often, there might be multiple valid solutions to a problem, each with its trade-offs in terms of these characteristics. The choice of the best solution typically depends on the specific context and requirements of the situation. Understanding what constitutes a solution is crucial in problem-solving, as it guides the development of algorithms and helps in evaluating different approaches.
 
-- **Single final state** — one specific goal state (e.g., the maze exit).
+### 1.7.1 Types of Solutions in State Space 
+In the context of a graph representation of a problem, a solution can take various forms depending on the nature of the problem and the specific requirements. Within the state-space framework, a "solution" can take several forms (different interpretations):
 
-- **Set of final states** — any of several acceptable end states (e.g., any winning score in a game).
+
+**Single Final State (S'f')** — one specific goal state (e.g., the maze exit).
+• **Definition**: A single, specific state that signifies the completion or solution of the problem.
+• **Example**: In a maze-solving problem, reaching the exit cell (S'f') represents the solution.
+• **Graph Representation**: The solution is a path from the initial state (S'o') to this final state (S'f').
+
+<img width="443" height="295" alt="image" src="https://github.com/user-attachments/assets/dac36fd3-8308-401d-8f9a-ea1560f264b9" />
+
+**Set of Final States ( )** — any of several acceptable end states (e.g., any winning score in a game).
+• **Definition**: A collection of acceptable final states, any of which would be considered a valid solution.
+• **Example**: In a game, reaching any of several winning states could be considered a solution. For example, in football the states could be encoded as (number of goals by team A, number of goals by team B). So the set of possible winning states is (1, 0), (2, 0), (2, 1), (3, 2)…
+• **Graph Representation**: The solution includes multiple paths from the initial state (S'o') to any of the states in the set F.
+
+
 
 - **Sequence of states** — the ordered path of steps taken (e.g., moves in a puzzle).
 
