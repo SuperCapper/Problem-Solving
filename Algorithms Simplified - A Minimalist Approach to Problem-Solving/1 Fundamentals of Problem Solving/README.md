@@ -37,85 +37,54 @@ Using a "squares on paper" analogy, imagine drawing two identical squares on the
 
 <img width="524" height="411" alt="image" src="https://github.com/user-attachments/assets/f047cbc3-61f0-4059-9ca6-57373430cb71" />
 
-To maintain the integrity of distinct data units, we'll dismiss the fourth scenario — overlapping, as it implies a fusion of data that defies our requirement for
-discrete units. 
+To maintain the integrity of distinct data units, we'll dismiss the fourth scenario — overlapping, as it implies a fusion of data that defies our requirement for discrete units. 
 
 ---
 
-For consistency, we'll consider each square to be identical in size,
-signifying that the data units, say numerical values, are equal in magnitude
-and uniform in type.
+For consistency, we'll consider each square to be identical in size, signifying that the data units, say numerical values, are equal in magnitude and uniform in type.
 
-Continuing under the premise that our data squares must not touch, the
-paper will be filled with non-intersecting squares. However, data in
-isolation is often meaningless. Thus, we introduce lines that bridge these
-squares, connecting one piece of data to another. 
+Continuing under the premise that our data squares must not touch, the paper will be filled with non-intersecting squares. However, data in isolation is often meaningless. Thus, we introduce lines that bridge these squares, connecting one piece of data to another. 
 
 <img width="598" height="459" alt="image" src="https://github.com/user-attachments/assets/e26938e5-fed2-4222-b4f7-50e39729afc1" />
 
-This network of squares and connecting lines forms the basic structure known as a **graph**. This
-structure enables us to navigate from one data point to another, allowing data to reference other data, a principle
+This network of squares and connecting lines forms the basic structure known as a **graph**. This structure enables us to navigate from one data point to another, allowing data to reference other data, a principle
 that underpins much of data organization and algorithm design.
 
-When squares are placed adjacently, they naturally create a sequence. This
-proximity can symbolize a related series of data units. We can extend this
-sequence indefinitely, not just linearly, but also bi-dimensionally on our
-two-dimensional paper, crafting rows and columns.
+When squares are placed adjacently, they naturally create a sequence. This proximity can symbolize a related series of data units. We can extend this sequence indefinitely, not just linearly, but also bi-dimensionally on our two-dimensional paper, crafting rows and columns.
 
 <img width="783" height="480" alt="image" src="https://github.com/user-attachments/assets/a221ca76-1ad2-479e-a805-d8cb8d53dc9d" />
 
-This arrangement gives rise to another fundamental data structure known as
-a **table**, or in computational terms, an **array**, or **matrix**. Arrays provide the
-groundwork for organizing data into an accessible order or grid, allowing
-for efficient storage and retrieval in computer systems.
+This arrangement gives rise to another fundamental data structure known as a **table**, or in computational terms, an **array**, or **matrix**. Arrays provide the groundwork for organizing data into an accessible order or grid, allowing for efficient storage and retrieval in computer systems.
 
 The idea of assigning identity to some area of the paper is twofold:
 • Draw a boundary
 • Name/label it
 
-The boundary is a small piece of the paper, represented by infinitely many
-points and the name is a finite string of symbols, mapped to a natural
-number.
+The boundary is a small piece of the paper, represented by infinitely many points and the name is a finite string of symbols, mapped to a natural number.
 
 <img width="516" height="180" alt="image" src="https://github.com/user-attachments/assets/e5e66c2f-8345-4421-813c-316c0a1ea0d3" />
 
-Once we introduce labelling, we can then introduce the power of random
-access memory. As humans, we can quickly point to the relevant area of the
-paper and identify a square, but a computer is "blind" and thus has to
-search the entire paper for the relevant item if necessary. 
+Once we introduce labelling, we can then introduce the power of random access memory. As humans, we can quickly point to the relevant area of the paper and identify a square, but a computer is "blind" and thus has to search the entire paper for the relevant item if necessary. 
 
-By using Cartesian coordinates (numerical values indicating position) and showing how if we
-provide the coordinates of the relevant items, the computer can implicitly
-"select" separately on x and y coordinates and end up at the right slot by
-"magic" (efficiently), we demonstrate the power of **random access** (RAM): a computer can jump directly to a piece of data via its coordinates rather than scanning everything. 
+By using Cartesian coordinates (numerical values indicating position) and showing how if we provide the coordinates of the relevant items, the computer can implicitly "select" separately on x and y coordinates and end up at the right slot by "magic" (efficiently), we demonstrate the power of **random access** (RAM): a computer can jump directly to a piece of data via its coordinates rather than scanning everything. 
 
 <img width="746" height="575" alt="image" src="https://github.com/user-attachments/assets/42e90cea-7be7-475c-b7cc-ac95752abfb4" />
 
-In the end, our understanding of data, with all its intricacies, boils down to
-two fundamental structures: 
+In the end, our understanding of data, with all its intricacies, boils down to two fundamental structures: 
 * the interconnected nodes of graphs and
 * the orderly rows and columns of tables.
 
 This insight is as straightforward as it is deep, revealing the core frameworks that underpin all forms of data organization.
 
-On paper or within the circuits of computers, our complex world of
-information is ultimately navigated through these two simple, yet powerful
-structures. It's a clear reflection of the binary essence of data representation
-—either as individual points linked by relationships or as sequences laid
-out in a grid—each with its unique way of organizing our digital landscape.
+On paper or within the circuits of computers, our complex world of information is ultimately navigated through these two simple, yet powerful structures. It's a clear reflection of the binary essence of data representation — either as individual points linked by relationships or as sequences laid out in a grid—each with its unique way of organizing our digital landscape.
 
 ## 1.4 Solving problems with the State Space formulation
 
-Problem-solving can be modeled as navigating through a **state space**. In this framework,
-the solution process is conceptualized as a series of transitions from one
-state to another, guided by a set of choices or actions.
+Problem-solving can be modeled as navigating through a **state space**. In this framework, the solution process is conceptualized as a series of transitions from one state to another, guided by a set of choices or actions.
 
 ### 1.4.1 State Space Representation 
 
-In the context of state space, "space" refers to the set of all possible
-configurations or conditions (states) that a system can occupy. It
-encompasses every potential state the system can transition to based on its
-variables, boundaries and constraints. 
+In the context of state space, "space" refers to the set of all possible configurations or conditions (states) that a system can occupy. It encompasses every potential state the system can transition to based on its variables, boundaries and constraints. 
 
 The state space can be represented as a graph as follows: 
 
@@ -135,92 +104,60 @@ The state space can be represented as a graph as follows:
 
 - **Final State (Sf)**: There can be many types of goals when considering a solution to a problem.
 
-A common goal is to reach a final state (Sf), where the problem is considered solved. We go from state to state applying choices until the success criteria are met. 
-The final state satisfies the conditions or criteria defined by the problem. Other types of goals are specified in a later section.
+A common goal is to reach a final state (Sf), where the problem is considered solved. We go from state to state applying choices until the success criteria are met. The final state satisfies the conditions or criteria defined by the problem. Other types of goals are specified in a later section.
 
 ---
 
-**Reaching the Final State**: To determine if a final state has been reached,
-specific conditions are checked. These could include:
+**Reaching the Final State**: To determine if a final state has been reached, specific conditions are checked. These could include:
 
-• **Goal achievement**: Verifying if the desired outcome has been
-attained (e.g., all puzzle pieces are in the correct positions).
+• **Goal achievement**: Verifying if the desired outcome has been attained (e.g., all puzzle pieces are in the correct positions).
 
-• **Constraint satisfaction**: Ensuring all problem constraints are met
-(e.g., all items are packed within the weight limit).
+• **Constraint satisfaction**: Ensuring all problem constraints are met (e.g., all items are packed within the weight limit).
 
-• **Optimization criteria**: Checking if the solution meets or exceeds a
-defined threshold (e.g., the shortest path has been found).
+• **Optimization criteria**: Checking if the solution meets or exceeds a defined threshold (e.g., the shortest path has been found).
 
-• **Termination conditions**: Assessing if predefined stopping criteria
-have been met (e.g., a maximum number of iterations has been
-reached).
+• **Termination conditions**: Assessing if predefined stopping criteria have been met (e.g., a maximum number of iterations has been reached).
 
-The specific conditions checked depend on the nature of the problem and
-the desired solution characteristics. 
+The specific conditions checked depend on the nature of the problem and the desired solution characteristics. 
 
 ### 1.4.2 Universal Problem Structure
 
-By assuming this state/choice/transition/goal structure, every problem can be considered a variant of
-this "master" problem. This universal representation helps in applying
-general problem-solving techniques and algorithms across different
-domains. Here are a few methods that can be used within this framework:
+By assuming this state/choice/transition/goal structure, every problem can be considered a variant of this "master" problem. This universal representation helps in applying general problem-solving techniques and algorithms across different domains. Here are a few methods that can be used within this framework:
 
-• **Greedy Algorithms**: At each state, choose the action that appears
-to be the best immediate option, hoping it leads to the optimal
-final state.
+• **Greedy Algorithms**: At each state, choose the action that appears to be the best immediate option, hoping it leads to the optimal final state.
 
-• **Exhaustive Search**: Explore all possible states and transitions to
-ensure that the optimal solution is found.
+• **Exhaustive Search**: Explore all possible states and transitions to ensure that the optimal solution is found.
 
-• **Divide and Conquer**: Break the problem into smaller subproblems,
-solve each independently and combine the results to form the final
-state.
+• **Divide and Conquer**: Break the problem into smaller subproblems, solve each independently and combine the results to form the final state.
 
-• **Dynamic Programming**: Use previously computed solutions of
-subproblems to construct the solution for the current state,
-optimizing the process. Maze pathfinding maps directly onto this framework (initial position → moves → new position → goal position).
+• **Dynamic Programming**: Use previously computed solutions of subproblems to construct the solution for the current state, optimizing the process. Maze pathfinding maps directly onto this framework (initial position → moves → new position → goal position).
 
 ### Example: Pathfinding in a Maze
-Let's apply this concept to a simple example: finding a path through a
-maze.
+Let's apply this concept to a simple example: finding a path through a maze.
 
 • Initial State (So): The starting position in the maze.
 
-• Choices (Ci): The possible moves (up, down, left, right) from the
-current position.
+• Choices (Ci): The possible moves (up, down, left, right) from the current position.
 
-• Transition Function (T): Applying a move to the current position
-results in a new position.
+• Transition Function (T): Applying a move to the current position results in a new position.
 
 • Final State (S): The goal position in the maze.
 
 <img width="553" height="565" alt="image" src="https://github.com/user-attachments/assets/23dfdc78-7b94-41f1-a805-404ca809ea9d" />
 
-The solution involves navigating from the initial state to the final state by
-making a series of choices that transition through the state space of the
-maze. 
+The solution involves navigating from the initial state to the final state by making a series of choices that transition through the state space of the maze. 
 
 ### 1.4.3 Summary 
 
-By visualizing problems as navigating through a state space, we can apply a
-consistent and structured approach to problem-solving. Each problem is
-reduced to a sequence of state transitions, driven by choices, until the final
-state is reached. This abstraction is powerful and versatile, enabling the
-application of various algorithms and techniques to solve a wide array of
-problems. 
+By visualizing problems as navigating through a state space, we can apply a consistent and structured approach to problem-solving. Each problem is reduced to a sequence of state transitions, driven by choices, until the final state is reached. This abstraction is powerful and versatile, enabling the application of various algorithms and techniques to solve a wide array of problems. 
 
 ## 1.5 Navigating Through State Space as Graph Traversal
 
-The concept of navigating through a state space can indeed be effectively
-considered as a traversal of a graph. This perspective allows us to leverage
-the rich set of tools and algorithms developed for graph theory to solve a
-wide range of problems.
+The concept of navigating through a state space can indeed be effectively considered as a traversal of a graph. This perspective allows us to leverage the rich set of tools and algorithms developed for graph theory to solve a wide range of problems.
 
 ### 1.5.1 Exploring the Graph
 
-By viewing the state space as a graph, we can apply various graph traversal
-techniques to explore and find solutions to the problem. 
+By viewing the state space as a graph, we can apply various graph traversal techniques to explore and find solutions to the problem. 
 
 The following is a (non-exhaustive) list of graph traversal algorithms:
 • Breadth-First Search (BFS)
@@ -229,29 +166,45 @@ The following is a (non-exhaustive) list of graph traversal algorithms:
 • A* Algorithm (not covered) 
 
 ### 1.5.2 Advantages of Graph Traversal for State Space Navigation
-• **Clarity and Structure**: Representing problems as graphs provides a
-clear and structured way to visualize and solve them.
-
-• **Algorithmic Tools**: A wide range of well-established algorithms for
-graph traversal and pathfinding can be directly applied.
-
-• **Optimization**: Graph-based methods allow for the optimization of
-solutions, such as finding the shortest or least costly path.
-
-• **Scalability**: Graph algorithms are designed to handle large and
-complex state spaces efficiently. 
+• **Clarity and Structure**: Representing problems as graphs provides a clear and structured way to visualize and solve them.
+• **Algorithmic Tools**: A wide range of well-established algorithms for graph traversal and pathfinding can be directly applied.
+• **Optimization**: Graph-based methods allow for the optimization of solutions, such as finding the shortest or least costly path.
+• **Scalability**: Graph algorithms are designed to handle large and complex state spaces efficiently. 
 
 ### 1.5.3 Summary 
-Viewing the navigation through state space as a graph traversal provides a
-powerful and versatile framework for problem-solving. By representing
-states as **nodes** and transitions as **edges** we can apply various graph
-traversal techniques to explore and solve problems effectively. This
-approach leverages the extensive body of knowledge and algorithms in
-graph theory, offering clarity, structure and efficiency in finding solutions
+Viewing the navigation through state space as a graph traversal provides a powerful and versatile framework for problem-solving. By representing states as **nodes** and transitions as **edges** we can apply various graph
+traversal techniques to explore and solve problems effectively. This approach leverages the extensive body of knowledge and algorithms in graph theory, offering clarity, structure and efficiency in finding solutions
 
 ## 1.6 The structure of problem decomposition
 
-Complex problems can be broken into subproblems represented as a **Directed Acyclic Graph (DAG)**, where nodes are subproblems and edges are dependencies between them.
+Complex problems can be broken into subproblems represented as a **Directed Acyclic Graph (DAG)**, which helps visualize the relationships between different components of a problem.
+
+<img width="585" height="476" alt="image" src="https://github.com/user-attachments/assets/fdb1ecdd-83cd-4b79-bc49-db059d0aab6f" />
+
+In the DAG above:
+• Nodes represent subproblems or components of the main problem.
+• Edges represent dependencies or relationships between these components.
+• The acyclic nature ensures there are no circular dependencies.
+• The direction of edges indicates the flow of information or sequence of solving.
+
+The DAG representation is a powerful tool in problem-solving as it provides a clear visual of the problem's structure, dependencies and potential solution paths.
+
+This structure allows us to:
+• Break down complex problems into manageable parts
+• Understand the order in which these parts need to be addressed 
+• Identify independent subproblems that can be solved in parallel
+• Recognize shared subproblems to avoid redundant work
+
+### 1.6.1 Conditions for Collapse into a DAG 
+A graph representing a state space or problem can be considered to "collapse" into a Directed Acyclic Graph (DAG) under certain conditions. This transition often implies a simplification or restructuring of the problem, allowing for more efficient solutions. 
+• **Acyclic Nature**: The graph must be acyclic, meaning there are no cycles or loops. Each state or node is visited only once, ensuring that the graph flows in one direction without revisiting any node.
+• **Dependency Structure**: The problem can be decomposed into subproblems with dependencies that are strictly hierarchical. Each subproblem depends on the results of other subproblems in a way that avoids circular dependencies.
+
+### 1.6.2 Implications of Collapsing into a DAG
+When a problem's graph representation collapses into a DAG, this restructuring provides several advantages:
+• **Subproblem Definition**: The problem is now decomposed into smaller, manageable subproblems. Each node (or state) in the DAG represents a subproblem that contributes to the overall solution.
+• **Topological Ordering**: The DAG allows for a “topological sorting” of nodes, providing an order in which subproblems should be solved. This order respects the dependencies and ensures that each subproblem is solved before it is needed by other subproblems.
+• **Efficiency in Problem-Solving**: With a DAG, we can apply dynamic programming and memoization techniques. Since the graph is acyclic, we can store the results of subproblems and reuse them, avoiding redundant computations. 
 
 A state-space graph "collapses" into a DAG when:
 
