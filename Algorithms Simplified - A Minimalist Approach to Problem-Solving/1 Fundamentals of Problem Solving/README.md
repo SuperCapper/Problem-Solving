@@ -133,7 +133,10 @@ The state space can be represented as a graph as follows:
 
 <img width="167" height="53" alt="image" src="https://github.com/user-attachments/assets/14d6537b-7f09-4009-b655-ec731c0aa4a7" />
 
-- **Final State (Sf)**: There can be many types of goals when considering a solution to a problem. A common goal is to reach a final state (Sf), where the problem is considered solved. The final state satisfies the conditions or criteria defined by the problem. We go from state to state applying choices until the success criteria are met. Other types of goals are specified in a later section.
+- **Final State (Sf)**: There can be many types of goals when considering a solution to a problem.
+
+A common goal is to reach a final state (Sf), where the problem is considered solved. We go from state to state applying choices until the success criteria are met. 
+The final state satisfies the conditions or criteria defined by the problem. Other types of goals are specified in a later section.
 
 ---
 
@@ -156,23 +159,95 @@ reached).
 The specific conditions checked depend on the nature of the problem and
 the desired solution characteristics. 
 
----
+### 1.4.2 Universal Problem Structure
 
-Because every problem can be cast into this state/choice/transition/goal structure, general techniques apply across domains:
+By assuming this state/choice/transition/goal structure, every problem can be considered a variant of
+this "master" problem. This universal representation helps in applying
+general problem-solving techniques and algorithms across different
+domains. Here are a few methods that can be used within this framework:
 
-- **Exhaustive search** — explore all states/transitions to guarantee optimality.
+• **Greedy Algorithms**: At each state, choose the action that appears
+to be the best immediate option, hoping it leads to the optimal
+final state.
 
-- **Divide and conquer** — split into independent subproblems, to later combine results.
+• **Exhaustive Search**: Explore all possible states and transitions to
+ensure that the optimal solution is found.
 
-- **Greedy algorithms** — pick the best-looking immediate choice at each step.
+• **Divide and Conquer**: Break the problem into smaller subproblems,
+solve each independently and combine the results to form the final
+state.
 
-- **Dynamic programming** — reuse previously computed subproblem solutions.
+• **Dynamic Programming**: Use previously computed solutions of
+subproblems to construct the solution for the current state,
+optimizing the process. Maze pathfinding maps directly onto this framework (initial position → moves → new position → goal position).
 
-Example: maze pathfinding maps directly onto this framework (initial position → moves → new position → goal position).
+### Example: Pathfinding in a Maze
+Let's apply this concept to a simple example: finding a path through a
+maze.
+
+• Initial State (So): The starting position in the maze.
+
+• Choices (Ci): The possible moves (up, down, left, right) from the
+current position.
+
+• Transition Function (T): Applying a move to the current position
+results in a new position.
+
+• Final State (S): The goal position in the maze.
+
+<img width="553" height="565" alt="image" src="https://github.com/user-attachments/assets/23dfdc78-7b94-41f1-a805-404ca809ea9d" />
+
+The solution involves navigating from the initial state to the final state by
+making a series of choices that transition through the state space of the
+maze. 
+
+### 1.4.3 Summary 
+
+By visualizing problems as navigating through a state space, we can apply a
+consistent and structured approach to problem-solving. Each problem is
+reduced to a sequence of state transitions, driven by choices, until the final
+state is reached. This abstraction is powerful and versatile, enabling the
+application of various algorithms and techniques to solve a wide array of
+problems. 
 
 ## 1.5 Navigating Through State Space as Graph Traversal
 
-Since state spaces are graphs, standard graph traversal algorithms apply directly: **BFS**, **DFS**, **Dijkstra's algorithm**, and **A\*** (covered later). Framing state-space navigation as graph traversal gives four advantages: clarity/structure, a large library of existing algorithmic tools, built-in optimization (shortest/least-cost paths), and scalability to large state spaces.
+The concept of navigating through a state space can indeed be effectively
+considered as a traversal of a graph. This perspective allows us to leverage
+the rich set of tools and algorithms developed for graph theory to solve a
+wide range of problems.
+
+### 1.5.1 Exploring the Graph
+
+By viewing the state space as a graph, we can apply various graph traversal
+techniques to explore and find solutions to the problem. 
+
+The following is a (non-exhaustive) list of graph traversal algorithms:
+• Breadth-First Search (BFS)
+• Depth-First Search (DFS)
+• Dijkstra's Algorithm
+• A* Algorithm (not covered) 
+
+### 1.5.2 Advantages of Graph Traversal for State Space Navigation
+• **Clarity and Structure**: Representing problems as graphs provides a
+clear and structured way to visualize and solve them.
+
+• **Algorithmic Tools**: A wide range of well-established algorithms for
+graph traversal and pathfinding can be directly applied.
+
+• **Optimization**: Graph-based methods allow for the optimization of
+solutions, such as finding the shortest or least costly path.
+
+• **Scalability**: Graph algorithms are designed to handle large and
+complex state spaces efficiently. 
+
+### 1.5.3 Summary 
+Viewing the navigation through state space as a graph traversal provides a
+powerful and versatile framework for problem-solving. By representing
+states as **nodes** and transitions as **edges** we can apply various graph
+traversal techniques to explore and solve problems effectively. This
+approach leverages the extensive body of knowledge and algorithms in
+graph theory, offering clarity, structure and efficiency in finding solutions
 
 ## 1.6 The structure of problem decomposition
 
