@@ -58,6 +58,8 @@ Continuing under the premise that our data squares must not touch, the paper wil
 This network of squares and connecting lines forms the basic structure known as a **graph**. This structure enables us to navigate from one data point to another, allowing data to reference other data, a principle
 that underpins much of data organization and algorithm design.
 
+---
+
 When squares are placed adjacently, they naturally create a sequence. This proximity can symbolize a related series of data units. We can extend this sequence indefinitely, not just linearly, but also bi-dimensionally on our two-dimensional paper, crafting rows and columns.
 
 
@@ -68,8 +70,12 @@ When squares are placed adjacently, they naturally create a sequence. This proxi
 
 This arrangement gives rise to another fundamental data structure known as a **table**, or in computational terms, an **array**, or **matrix**. Arrays provide the groundwork for organizing data into an accessible order or grid, allowing for efficient storage and retrieval in computer systems.
 
+---
+
 The idea of assigning identity to some area of the paper is twofold:
+
 • Draw a boundary
+
 • Name/label it
 
 The boundary is a small piece of the paper, represented by infinitely many points and the name is a finite string of symbols, mapped to a natural number.
@@ -89,6 +95,7 @@ By using Cartesian coordinates (numerical values indicating position) and showin
 <img width="746" height="575" alt="image" src="https://github.com/user-attachments/assets/42e90cea-7be7-475c-b7cc-ac95752abfb4" />
 </p>
 
+---
 
 In the end, our understanding of data, with all its intricacies, boils down to two fundamental structures: 
 * the interconnected nodes of graphs and
@@ -242,6 +249,8 @@ In the DAG above:
 • The acyclic nature ensures there are no circular dependencies.
 
 • The direction of edges indicates the flow of information or sequence of solving.
+
+---
 
 The DAG representation is a powerful tool in problem-solving as it provides a clear visual of the problem's structure, dependencies and potential solution paths.
 
