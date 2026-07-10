@@ -279,7 +279,7 @@ Often, there might be multiple valid solutions to a problem, each with its trade
 In the context of a graph representation of a problem, a solution can take various forms depending on the nature of the problem and the specific requirements. Within the state-space framework, a "solution" can take several forms (different interpretations):
 
 
-**Single Final State (S'f')** — one specific goal state (e.g., the maze exit).
+#### **Single Final State (S'f')** — one specific goal state (e.g., the maze exit)
 
 • **Definition**: A single, specific state that signifies the completion or solution of the problem.
 
@@ -289,7 +289,7 @@ In the context of a graph representation of a problem, a solution can take vario
 
 <img width="443" height="295" alt="image" src="https://github.com/user-attachments/assets/dac36fd3-8308-401d-8f9a-ea1560f264b9" />
 
-**Set of Final States ( )** — any of several acceptable end states (e.g., any winning score in a game).
+#### **Set of Final States (F)** — any of several acceptable end states (e.g., any winning score in a game)
 
 • **Definition**: A collection of acceptable final states, any of which would be considered a valid solution.
 
@@ -298,18 +298,87 @@ of possible winning states is (1, 0), (2, 0), (2, 1), (3, 2)…
 
 • **Graph Representation**: The solution includes multiple paths from the initial state (S'o') to any of the states in the set F.
 
+<img width="445" height="291" alt="image" src="https://github.com/user-attachments/assets/c2546e87-70bf-4df4-a630-e3d65a000145" />
 
+#### **Sequence of states** — the ordered path of steps taken (e.g., moves in a puzzle)
 
+• **Definition**: The ordered sequence of states or steps taken to reach the solution.
 
-- **Sequence of states** — the ordered path of steps taken (e.g., moves in a puzzle).
+• **Example**: The sequence of moves in a puzzle game that leads from the starting position to the completed puzzle.
 
-- **Optimal path** — the most efficient path by some metric (e.g., shortest route).
+• **Graph Representation**: The solution is the specific sequence of nodes (states) and edges (transitions) that leads from (S'o') to (S'f'). 
 
-- **All possible paths** — every path from start to goal(s) (e.g., enumerating combinations).
+<img width="638" height="222" alt="image" src="https://github.com/user-attachments/assets/225e3468-8726-43b5-becc-193d7bb7d6f8" />
 
-- **State space coverage** — visiting all reachable states (e.g., exhaustive search).
+#### **Optimal path** — the most efficient path by some metric (e.g., shortest route)
 
-Which type of solution is appropriate depends on context: optimization problems usually want an optimal path, search problems want a single or set of final states, and exploratory problems may need all paths or full coverage. The Travelling Salesperson Problem and Sudoku are worked examples showing how a single problem can be viewed through multiple solution-type lenses at once. Even continuous state spaces reduce to discrete state-space graphs once every change is treated as a discrete step.
+• **Definition**: The path that not only reaches the final state but does so in the most efficient way according to a given metric (e.g., shortest path, least cost).
+
+• **Example**: Finding the shortest route in a travel itinerary.
+
+• **Graph Representation**: The solution is the path with the minimal number of edges or the least cumulative weight from (S'o') to (S'f'). 
+
+<img width="557" height="350" alt="image" src="https://github.com/user-attachments/assets/bc31ff06-a540-4627-895a-f628e0733292" />
+
+#### **All possible paths** — every path from start to goal(s) (e.g., enumerating combinations)
+
+• **Definition**: Every possible path from the initial state to the final state(s), providing a complete set of solutions.
+
+• **Example**: Generating all possible combinations of items that satisfy a certain condition. 
+
+• **Graph Representation**: The solution set includes all paths from (S'o') to the final states.
+
+<img width="825" height="622" alt="image" src="https://github.com/user-attachments/assets/3455b2f0-7971-4996-9150-23e9922c720e" />
+
+In the above example, the solution paths (assuming 3 is the starting state and 9 is the final state) are:
+
+<img width="348" height="42" alt="image" src="https://github.com/user-attachments/assets/d04087b9-6bad-4434-b14d-640da569d09a" />
+
+---
+
+#### **State space coverage** — visiting all reachable states (e.g., exhaustive search)
+
+• **Definition**: The coverage of all reachable states from the initial state, ensuring all possibilities have been considered.
+
+• **Example**: In an exhaustive search, covering the entire state space to ensure no potential solution is missed. 
+
+• **Graph Representation**: The solution involves traversing the entire graph or a significant portion of it.
+
+<img width="609" height="395" alt="image" src="https://github.com/user-attachments/assets/77babb02-c6df-4666-9bd3-7dc49be13b24" />
+
+### 1.7.2 Determining the Type of Solution Needed
+The type of solution required depends on the problem's context and the specific goals:
+
+• **Optimization Problems**: Often require finding an optimal path (shortest, least cost).
+
+• **Search Problems**: May need a single final state or a set of final states.
+
+• **Exploratory Problems**: Might require all possible paths or state space coverage. 
+
+#### Example: Travelling Salesperson Problem (TSP)
+
+• **Single Final State**: Finding a route that visits all cities and returns to the start, considering the final state as the completed tour. 
+
+• **Optimal Path**: The shortest possible route that visits all cities.
+
+• **Sequence of States**: The order of cities visited in the optimal route. 
+
+#### Example: Sudoku Puzzle
+
+• **Single Final State**: A filled and valid Sudoku grid.
+
+• **Sequence of States**: The steps or moves made to fill the grid from the initial to the final state.
+
+• **All Possible Paths**: All possible sequences of moves that result in a completed grid.
+
+Note: Even if the state space is "continuous", for the purposes of computation, every delta is a discrete step, thus bringing us back to a state space graph representation. 
+
+### 1.8 Conclusion
+In this chapter, we explored the fundamentals of problem-solving, starting with the definition and types of problems and delving into the foundational elements of data structures. Understanding these core concepts allows us to approach problem-solving systematically and efficiently.
+
+We also introduced the concept of state space and its representation as a graph, highlighting how navigating through this space can be visualized as graph traversal. This perspective enables us to apply a wide range of graphbased algorithms to find solutions. Additionally, we examined how complex problems can be decomposed into manageable subproblems using
+
+Directed Acyclic Graphs (DAGs), facilitating efficient problem-solving through dynamic programming and other techniques. 
 
 ---
 
