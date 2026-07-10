@@ -471,6 +471,8 @@ Directed Acyclic Graphs (DAGs), facilitating efficient problem-solving through d
 
 ---
 
+This chapter established the vocabulary for everything that follows: problems and their types, the two foundational data structures (graphs and tables), the state-space formulation (state, choices, transitions, final state), state-space navigation as graph traversal, problem decomposition via DAGs, and the different forms a "solution" can take. These concepts underpin the algorithms and techniques covered in later chapters.
+
 Core concepts for approaching problems before writing any code: understanding requirements, breaking problems into smaller pieces, and choosing a strategy (brute force, greedy, divide and conquer, dynamic programming, etc.).
 
 Contents:
@@ -482,7 +484,3 @@ Contents:
 - Choosing an approach
 
 - Common problem-solving heuristics
-
-## 1.8 Conclusion
-
-This chapter established the vocabulary for everything that follows: problems and their types, the two foundational data structures (graphs and tables), the state-space formulation (state, choices, transitions, final state), state-space navigation as graph traversal, problem decomposition via DAGs, and the different forms a "solution" can take. These concepts underpin the algorithms and techniques covered in later chapters.
