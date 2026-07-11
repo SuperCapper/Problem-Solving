@@ -25,6 +25,15 @@ Memoization is a technique used to speed up computer programs by storing the res
 
 This approach is particularly beneficial in programming for operations with overlapping subproblems and optimal substructure, common in dynamic programming. It ensures that each unique calculation is done only once, mirroring the way you wouldn't make unnecessary trips to the store for ingredients you already have. Memoization, thus, embodies the principle of efficiency through reuse, whether in the kitchen or in code, ensuring that efforts—be they in baking or computing—are never wasted. 
 
+## 2.1.4 Dynamic Programming (DP)
+DP is a method that combines this idea of graph traversal with memoization. It systematically breaks down a problem into subproblems, solves each subproblem just once, stores the solution in a table (often conceptualized as a graph) and reuses these solutions to solve larger related subproblems. 
+
+<img width="631" height="544" alt="image" src="https://github.com/user-attachments/assets/67297c09-51b3-444e-8a99-4e1974d8039d" />
+
+The difference between DP and just memoizing is that DP also finds the optimal order of traversing the state space so as to minimize time and space usage.
+
+<img width="855" height="630" alt="image" src="https://github.com/user-attachments/assets/4550bfec-03f9-4d8b-8cd2-bab32106703a" />
+
 ## 2.2 What is a program? (barebones)
 
 A program is a set of instructions telling a computer how to perform a task. The chapter covers Python basics as the core building blocks of any program:
