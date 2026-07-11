@@ -152,9 +152,9 @@ The state space can be represented as a graph as follows:
 
 - **Final State (Sf)**: There can be many types of goals when considering a solution to a problem.
 
-A common goal is to reach a final state (Sf), where the problem is considered solved. We go from state to state applying choices until the success criteria are met. The final state satisfies the conditions or criteria defined by the problem. Other types of goals are specified in a later section.
-
 ---
+
+A common goal is to reach a final state (Sf), where the problem is considered solved. We go from state to state applying choices until the success criteria are met. The final state satisfies the conditions or criteria defined by the problem. Other types of goals are specified in a later section.
 
 - **Reaching the Final State**: To determine if a final state has been reached, specific conditions are checked. These could include:
 
