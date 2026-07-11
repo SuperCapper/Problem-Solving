@@ -1,15 +1,29 @@
 # 2. Computation and Complexity
 
-Summary of Chapter 2 from *Algorithms Simplified: A Minimalist Approach to Problem-Solving* (Rohith B V).
-
 ## 2.1 What is an algorithm?
 
-An algorithm is a set of rules for solving a problem — in state-space terms, the rules for navigating the state space efficiently to a solution. A few core algorithmic approaches:
+An algorithm is a process or set of rules to be followed in calculations or other problem-solving operations. In the context of the state space approach, it can be seen as a set of rules to be followed to navigate the state space efficiently to arrive at a solution.
 
-- **Greedy algorithms** — take the locally optimal choice at each step, hoping it leads to a global optimum.
-- **Divide and conquer** — split the problem into independent subproblems, solve each recursively, then combine results (visualized as splitting a graph into disjoint subgraphs).
+A few core algorithmic approaches:
+
+- **Greedy algorithms** — take the locally optimal choice at each step, hoping it leads to a global optimum. They traverse the problem space graph by always choosing the most promising node that can be reached directly from the current node.
+
+- **Divide and conquer** — split the problem into independent subproblems, solve each recursively, then combine results (visualized as splitting a graph into disjoint subgraphs, each representing a fraction of the
+original problem. ).
+
 - **Memoization and caching** — cache the result of a subproblem the first time it's computed, and reuse it if the same subproblem recurs (illustrated with the "cinnamon" baking analogy: buy cinnamon once, reuse it for both the cake and the buns instead of re-buying).
+
 - **Dynamic Programming (DP)** — combines graph traversal with memoization: break the problem into subproblems, solve each exactly once, store results in a table, and reuse them. DP goes further than plain memoization by also finding the optimal *order* to traverse the state space to minimize time/space.
+
+---
+
+Memoization is a technique used to speed up computer programs by storing the results of expensive function calls and reusing those results when the same inputs occur again. Rather than computing the same information multiple times, the program "remembers" the results of past computations, much like how you remembered you had already bought cinnamon. This reduces the number of calculations needed, making the program more efficient.
+
+- **First Instance (Buying Cinnamon)**: Represents the initial computation of a function. Just like buying cinnamon for the cake, the program calculates the result for an input it hasn't seen before and stores it.
+
+- **Subsequent Instance (Reusing Cinnamon)**: Corresponds to accessing the stored result. When you go to make the cinnamon buns, instead of buying more cinnamon, you reuse what you have. Similarly, the program retrieves the stored result for a known input without recalculating it.
+
+This approach is particularly beneficial in programming for operations with overlapping subproblems and optimal substructure, common in dynamic programming. It ensures that each unique calculation is done only once, mirroring the way you wouldn't make unnecessary trips to the store for ingredients you already have. Memoization, thus, embodies the principle of efficiency through reuse, whether in the kitchen or in code, ensuring that efforts—be they in baking or computing—are never wasted. 
 
 ## 2.2 What is a program? (barebones)
 
