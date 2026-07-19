@@ -9,7 +9,7 @@ A few core algorithmic approaches:
 - **Greedy algorithms** — take the locally optimal choice at each step, hoping it leads to a global optimum. They traverse the problem space graph by always choosing the most promising node that can be reached directly from the current node.
 
 - **Divide and conquer** — split the problem into independent subproblems, solve each recursively, then combine results (visualized as splitting a graph into disjoint subgraphs, each representing a fraction of the
-original problem. ).
+original problem).
 
 - **Memoization and caching** — cache the result of a subproblem the first time it's computed, and reuse it if the same subproblem recurs (illustrated with the "cinnamon" baking analogy: buy cinnamon once, reuse it for both the cake and the buns instead of re-buying).
 
@@ -36,18 +36,58 @@ The difference between DP and just memoizing is that DP also finds the optimal o
 
 ## 2.2 What is a program? (barebones)
 
-A program is a set of instructions telling a computer how to perform a task. The chapter covers Python basics as the core building blocks of any program:
+A program is a set of instructions telling a computer how to perform a task. The core building blocks of any program:
 
-- **Branches** — `if`/`elif`/`else` and `match`/`case` for conditional control flow.
-- **Loops** — `for` loops (known iteration count), `while` loops (condition-driven), and `do-while` loops (simulated in Python; guarantees at least one execution).
-- **Variables** — containers for storing data.
+
+- **Branches** are for decision-making and conditional control flow.
+
+**If-else statements** allow for binary decisions. If a condition is true, one block of code is executed; otherwise, another block is executed. 
+
+<img width="530" height="202" alt="image" src="https://github.com/user-attachments/assets/25ce07b3-95e1-40d1-a5c5-6276a625d4e6" />
+
+**Switch-case/match-case statements** are useful for multiple condition checking, especially when comparing a single variable against multiple values. 
+
+<img width="608" height="237" alt="image" src="https://github.com/user-attachments/assets/d35e44e7-f817-4725-9c41-3f4f473d02e3" />
+
+“case 0” refers to the case where x is 0, “case 1” refers to the case where x is 1 and so on.
+
+
+- **Loops** are fundamental for repetitive tasks in programming. They allow a set of instructions to be executed multiple times.
+
+**For loops** (Ideal when the number of iterations is known beforehand)
+
+<img width="342" height="80" alt="image" src="https://github.com/user-attachments/assets/c467b6e1-17f8-4373-8f07-4d44aaff5ae1" />
+
+**while loops** (Used when the number of iterations is unknown and depends on a condition)
+
+<img width="222" height="132" alt="image" src="https://github.com/user-attachments/assets/eb8e1011-7376-4095-9e3b-456f033a5af9" />
+
+**Do-while** loops (Similar to while loops, but guarantees at least one execution of the loop body)
+Python doesn’t provide the option of using a do-while loop, so this example simulates one.
+
+<img width="252" height="189" alt="image" src="https://github.com/user-attachments/assets/fc9f0fee-ac40-4738-9ab8-3c503360c177" />
+
+- **Variables** are containers for storing data in a program. They are fundamental to manipulating and processing information. 
+
+In this example, both x and y are variables holding integer values.
+
+<img width="206" height="110" alt="image" src="https://github.com/user-attachments/assets/cadceff2-bb82-4fce-8af2-3aba7157e106" />
+
 - **I/O** — reading input and printing output.
-- **Operations** — arithmetic (`+ - * /`, modulus, exponentiation), logical (`and`/`or`/`not`), and bitwise (mentioned but not covered in depth).
-- **Methods (functions)** — reusable, named blocks of code with parameters and a body.
+
+- **Operations** — arithmetic (`+ - * /`, modulus, exponentiation), logical (`and`/`or`/`not`), and bitwise (operations are for manipulating individual bits in data. Useful for
+low-level programming and optimizations).
+
+- **Methods (functions)** — reusable, named blocks of code that perform specific tasks, with parameters and a body.
+
 - **Recursion** — a function calling itself, with a base case (stops recursion) and a recursive case (breaks the problem down further), illustrated with a factorial example. Pros: elegant for naturally recursive problems (e.g., tree traversal). Cons: risk of stack overflow on deep recursion, and can be less efficient than iterative solutions.
+
 - **Execution** — explained via a "carrot soup" analogy: the cook (CPU) and gravity/water system (another executing agent) can work in parallel, mirroring parallel execution across CPU cores.
+
 - **The Execution Stack** — the call stack manages function calls LIFO; each call pushes a stack frame (local variables, arguments, return address) that's popped on completion. The call stack's LIFO behavior is directly analogous to how Depth-First Search (DFS) manages traversal.
+
 - **Program as a Graph** — programs can be modeled as graphs where nodes are functions/methods and edges are calls between them, clarifying control flow and call hierarchies.
+
 - **Universal Nature of Graph Representations** — graphs recur everywhere in CS (control flow, networks, I/O flowcharts) because nodes+edges give a unified way to model states and transitions.
 
 ## 2.3 What is a process?
